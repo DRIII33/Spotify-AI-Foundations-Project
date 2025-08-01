@@ -1,0 +1,16 @@
+Dataset Name,Column Name,Data Type,Description
+user_behavior.csv,user_id,STRING,Unique identifier for each user.
+,playlist_id,STRING,Identifier for the playlist being played.
+,track_id,STRING,Identifier for the song being played.
+,event_timestamp,TIMESTAMP,The time of the user's interaction.
+,stream_duration_sec,INTEGER,The duration in seconds the user listened to the track.
+,skipped_flag,INTEGER,Binary flag (0 or 1) indicating if the track was skipped.
+,event_type,STRING,"The type of user event (e.g., 'stream_play')."
+gen_shuffle_events.csv,user_id,STRING,Unique identifier for each user.
+,event_timestamp,TIMESTAMP,The time of the AI-generated event.
+,event_type,STRING,"Type of AI event ('commentary_start', 'user_feedback_positive', 'user_feedback_negative')."
+,ai_commentary_text,STRING,The actual text of the AI commentary.
+qualitative_ratings.csv,commentary_text,STRING,A sample of AI commentary to be rated.
+,human_coherence_rating,INTEGER,Simulated coherence rating (1-5) from a human rater.
+,llm_coherence_rating,INTEGER,Simulated coherence rating (1-5) from an LLM-as-a-judge.
+,safety_flag,INTEGER,Binary flag (0 or 1) indicating if the commentary was flagged for safety.
